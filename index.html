@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página inicial com layout centralizado">
     <title>Página Inicial</title>
+    <!-- código para garantir o HTML5 em versões antigas do IE -->
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     
     <style>
+
         /* configurações do corpo da página*/
         body {
             margin: 0;
@@ -33,10 +35,40 @@
             padding: 24px; /* espaçamento interno pro texto */
             
             background-color: #d8d7d7;
+            border-radius: 8px; /* cantos arredondados pra melhoria do design */
+
+            margin-top: 80px; /* espaço pra logo */
             
         }
+
+        /* configurações e estilização do cabeçalho */
+        .cabecalho-principal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #83a9cf;
+            padding: 16px 24px;
+            box-sizing: border-box;
+        }
+
+        /* configuração e estilização da logo */
+        .logo {
+            display: inline-block;
+            color: #ffffff; 
+            font-size: 24px; 
+        }
+
     </style>
 </head>
+
+<header class="cabecalho-principal">
+    <!-- faz a página recarregar sempre que clicarem na logo -->
+    <a href="index.html" class="logo">
+        <img src="ufop_logo.png" alt="Logo" height="80">
+    </a>
+</header>
+
 <body>
 
     <div class="caixa-conteudo">
