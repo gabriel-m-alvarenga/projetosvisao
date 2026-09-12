@@ -4,9 +4,10 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página do departamento de projetos">
-    <title>Página Inicial</title>
+    <meta name="description" content="Página do desafio do departamento de projetos">
+    <title>Página Projetos</title>
     <!-- código para garantir o HTML5 em versões antigas do IE -->
+    <!-- após verificar o url do script no manual, descobri que ele se encontra inválido, por isso pesquisei outra alternativa -->
     <!--[if lt IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -25,7 +26,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* ocupa 100% da altura da tela (centro) */
         }
 
         /* estilização da caixa de conteúdo */
@@ -33,20 +33,20 @@
             width: 90%; /* largura de 90% (ocupando quase toda a página) */
             height: 60vh; /* altura de 60% da página */
             margin: 24px; /* espaçamento bidimensional de 24px em relação a outros elementos */
-            padding: 24px; /* espaçamento bidimensional interno pro texto tanto */
+            padding: 24px; /* espaçamento bidimensional interno pro texto */
             border-radius: 8px; /* bordas arredondadas */
             background-color: #141414; /* cor da caixa */
 
-            color: #ffffff;
+            color: #ffffff; /* cor do texto */
 
-            /* elementos para melhor centralização da caixa relativa ao header e footer*/
-            margin-top: 110px; 
-            margin-bottom: 80px; 
+            /* definição da altura da caixa na página */
+            margin-top: 110px;  
         }
 
         /* configurações e estilização do cabeçalho */
         .cabecalho-principal {
 
+            /* fundo pro header */
             position: absolute;
             top: 0px;
             left: 0;
@@ -60,6 +60,7 @@
             font-size: 24px;
             text-decoration: none;
             font-weight: bold;
+            
             /* solução para o redimensionamento da logo (mesmo da caixa) */
             display:flex;
             align-items: center;
@@ -97,10 +98,11 @@
             img{ 
                 width: 150px;
                 height: 150px;
-                /* solução para a imagem achatando */
-                flex-shrink: 0;
                 margin: -35px 0px;
                 padding: 0px 0px;
+
+                /* solução para a imagem achatando */
+                flex-shrink: 0;
             }
 
             display: flex;
