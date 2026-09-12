@@ -4,7 +4,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página inicial com layout centralizado">
+    <meta name="description" content="Página do departamento de projetos">
     <title>Página Inicial</title>
     <!-- código para garantir o HTML5 em versões antigas do IE -->
     <!--[if lt IE 9]>
@@ -32,8 +32,8 @@
         .caixa-conteudo {
             width: 90%; /* largura de 90% (ocupando quase toda a página) */
             height: 60vh; /* altura de 60% da página */
-            margin: 24px; /* espaçamento de 24px em relação a outros elementos */
-            padding: 24px; /* espaçamento interno pro texto */
+            margin: 24px; /* espaçamento bidimensional de 24px em relação a outros elementos */
+            padding: 24px; /* espaçamento bidimensional interno pro texto tanto */
             border-radius: 8px; /* bordas arredondadas */
             background-color: #141414; /* cor da caixa */
 
@@ -54,7 +54,8 @@
             background-color: #141414;
             padding: 12px 24px;
             box-sizing: border-box;
-
+            
+            /* estilização do texto no Header */
             color: #5aab4c;           
             font-size: 24px;
             text-decoration: none;
@@ -68,12 +69,14 @@
 
         /* configurações e estilização do rodapé */
         .rodape-principal {
+            /* configurações da logo2 */
             img {
                 width: 48px;
                 height: 48px; 
                 vertical-align: middle;
             }
-
+            
+            /* mesma lógica do rodapé */
             position: absolute;
             bottom: 0;
             left: 0;
@@ -89,7 +92,7 @@
 
         }
 
-        /* configuração e estilização da logo */
+        /* configuração e estilização exclusiva da logo e texto alternativo */
         .logo {
             img{ 
                 width: 150px;
@@ -119,9 +122,9 @@
 
         <!-- faz a página recarregar sempre que clicarem na logo -->
         <a href="index.html" class="logo">
-            <img src="logo.png" alt="Logo">
-            
+            <img src="logo.png" alt="Logo">      
         </a>
+      
         DEPARTAMENTO DE PROJETOS
 
     </header>
@@ -147,4 +150,3 @@
     
 </body>
 </html>
-
