@@ -18,10 +18,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family:monospace;
+            background-color: #ffffffd0;
             
-            /* centralização da caixa na tela */
+            /* centralização da caixa e outros elementos */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -34,57 +34,101 @@
             height: 60vh; /* altura de 60% da página */
             margin: 24px; /* espaçamento de 24px em relação a outros elementos */
             padding: 24px; /* espaçamento interno pro texto */
-            
-            background-color: #d8d7d7;
-            border-radius: 8px; /* cantos arredondados pra melhoria do design */
+            border-radius: 8px; /* bordas arredondadas */
+            background-color: #141414; /* cor da caixa */
 
-            margin-top: 125px; /* espaço pra logo */
-            margin-bottom: 80px; /* espaço pra rodapé */            
+            color: #ffffff;
+
+            /* elementos para melhor centralização da caixa relativa ao header e footer*/
+            margin-top: 110px; 
+            margin-bottom: 80px; 
         }
 
         /* configurações e estilização do cabeçalho */
         .cabecalho-principal {
+
             position: absolute;
-            top: 0;
+            top: 0px;
             left: 0;
             width: 100%;
-            background-color: #83a9cf;
-            padding: 16px 24px;
+            background-color: #141414;
+            padding: 12px 24px;
             box-sizing: border-box;
+
+            color: #5aab4c;           
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            /* solução para o redimensionamento da logo (mesmo da caixa) */
+            display:flex;
+            align-items: center;
+            justify-content: left;
+            
         }
 
         /* configurações e estilização do rodapé */
         .rodape-principal {
+            img {
+                width: 48px;
+                height: 48px; 
+                vertical-align: middle;
+            }
+
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #83a9cf;
-            padding: 16px 24px;
+            background-color: #141414;
+            padding: 12px 24px;
             box-sizing: border-box;
+
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            color: #28a745;
+
         }
-        /* configuração e estilização da logo (texto) */
+
+        /* configuração e estilização da logo */
         .logo {
-            display: inline-block;
-            color: #ffffff; 
-            font-size: 24px; 
+            img{ 
+                width: 150px;
+                height: 150px;
+                /* solução para a imagem achatando */
+                flex-shrink: 0;
+                margin: -35px 0px;
+                padding: 0px 0px;
+            }
+
+            display: flex;
+            text-align: center;
+            line-height: 150px;
+            color: #28a745;
+            text-decoration: none;
+            font-weight:normal;
+            
         }
 
     </style>
-</head>
 
-<header class="cabecalho-principal">
-    <!-- faz a página recarregar sempre que clicarem na logo -->
-    <a href="index.html" class="logo">
-        <img src="ufop_logo.png" alt="Logo" height="80">
-    </a>
-</header>
+</head>
 
 <body>
 
+    <header class="cabecalho-principal">
+
+        <!-- faz a página recarregar sempre que clicarem na logo -->
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+            
+        </a>
+        DEPARTAMENTO DE PROJETOS
+
+    </header>
+
     <div class="caixa-conteudo">
 
-        <h2>Conteúdo Principal</h2>
+        <h2>Caixa de Conteúdo</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
         </p>
@@ -94,10 +138,13 @@
         
     </div>
 
+    <footer class="rodape-principal">
+
+        <img src="logo2.png" alt="Logo2">
+        All Rights Reserved.
+
+    </footer>
+    
 </body>
+</html>
 
-<footer class="rodape-principal">
-    <p>All Rights Reserved</p>
-</footer>
-
-</html></div>
